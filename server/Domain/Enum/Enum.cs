@@ -1,4 +1,4 @@
-namespace server.Domain;
+namespace server.Domain.Enums;
 
 public enum MediaType
 {
