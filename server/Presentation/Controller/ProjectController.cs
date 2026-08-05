@@ -28,7 +28,7 @@ public class ProjectController : ControllerBase
         });
     }
 
-    [HttpGet("/id")]
+    [HttpGet("/projectId")]
     public async Task<IActionResult> GetProjectsById(Guid id)
     {
         var projectById = await _projects.GetProjectsById(id);
@@ -46,7 +46,7 @@ public class ProjectController : ControllerBase
     {
         var project = await _projects.GetProjectsByType(type);
 
-        return Ok(new Response<ProjectsDTO>
+        return Ok(new Response<IQueryable<ProjectsDTO>>
         {
             Success = true,
             Message = "Projects fetched",
