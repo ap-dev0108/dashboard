@@ -8,5 +8,6 @@ public class AppDbContext : DbContext
     public AppDbContext(DbContextOptions<AppDbContext> dbContextOptions) : base(dbContextOptions) { }
 
     public DbSet<Media> Media { get; set; }
-    public DbSet<Projects> Projects {get; set;}
+    public DbSet<Projects> Projects { get; set; }
+    public DbSet<Finance> Finances { get; set; }
 }
