@@ -1,4 +1,5 @@
 using server.Domain;
+using server.Domain.Enums;
 
 namespace server.Application;
 
@@ -47,22 +48,25 @@ public class ProjectService
         return project;
     }
 
-    public async Task<ProjectsDTO> GetProjectsByType(string type)
+    public async Task<IQueryable<ProjectsDTO>> GetProjectsByType(string type)
     {
-        var projectFiltered = await _projectRepo.GetProjectsByType(type) ??
+        if (!Enum.TryParse<ProjectType>(type, true, out var projectType))
+        {
+            throw new UnauthorizedAccessException("Invalid project type");
+        }
+        var projectFiltered = await _projectRepo.GetProjectsByType(projectType) ??
             throw new KeyNotFoundException("Project cannot be found with the matched project type");
 
-        var project = new ProjectsDTO
+        return projectFiltered.Select(s => new ProjectsDTO
         {
-            ProjectsID = projectFiltered.ProjectsID,
-            ProjectTitle = projectFiltered.ProjectTitle,
-            projectType = projectFiltered.projectType,
-            LiveURL = projectFiltered.LiveURL,
-            ImageURL = projectFiltered.ImageURL,
-            GithubURL = projectFiltered.GithubURL
-        };
+            ProjectsID = s.ProjectsID,
+            ProjectTitle = s.ProjectTitle,
+            projectType = s.projectType,
+            LiveURL = s.LiveURL,
+            ImageURL = s.ImageURL,
+            GithubURL = s.GithubURL
+        });
 
-        return project;
     }
 
     public async Task AddProjects(AddProjectsDTO addProjectsDTO)
