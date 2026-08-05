@@ -28,7 +28,7 @@ public class MediaController : ControllerBase
         });
     }
 
-    [HttpGet("/id")]
+    [HttpGet("/mediaId")]
     public async Task<IActionResult> GetMediaById(Guid id)
     {
         var media = await _mediaServices.GetMediaById(id);
