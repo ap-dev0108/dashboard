@@ -13,6 +13,9 @@ public static class RepoInjection
         services.AddScoped<IDataRepo, DataRepo>();
         services.AddScoped<DataRepo>();
 
+        services.AddScoped<IProjectRepo, ProjectsRepo>();
+        services.AddScoped<ProjectsRepo>();
+
         return services;
     }
 }
