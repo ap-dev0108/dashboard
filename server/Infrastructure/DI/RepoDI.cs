@@ -10,6 +10,9 @@ public static class RepoInjection
         services.AddScoped<IMediaRepo, MediaRepo>();
         services.AddScoped<MediaRepo>();
 
+        services.AddScoped<IDataRepo, DataRepo>();
+        services.AddScoped<DataRepo>();
+
         return services;
     }
 }
