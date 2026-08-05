@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using Npgsql.EntityFrameworkCore.PostgreSQL;
+using server.Application;
 using server.Infra;
 using server.Infra.Persistence;
+using server.Presentation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +10,27 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.RepoDI();
+builder.Services.AddControllers();
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "My API",
+        Version = "v1"
+    });
+});
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnectionString")));
+
+builder.Services.RepoDI();
+builder.Services.ServiceInjection();
+using var serviceProvider = builder.Services.BuildServiceProvider();
+var mediaService = serviceProvider.GetService<MediaService>();
+if (mediaService == null)
+    Console.WriteLine("MediaService not registered!");
+
 
 var app = builder.Build();
 
@@ -19,7 +38,11 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
+
+app.MapControllers();
 app.UseHttpsRedirection();
 app.Run();
