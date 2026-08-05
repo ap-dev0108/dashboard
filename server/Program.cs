@@ -26,13 +26,10 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(builder
 
 builder.Services.RepoDI();
 builder.Services.ServiceInjection();
-using var serviceProvider = builder.Services.BuildServiceProvider();
-var mediaService = serviceProvider.GetService<MediaService>();
-if (mediaService == null)
-    Console.WriteLine("MediaService not registered!");
-
 
 var app = builder.Build();
+
+app.UseMiddleware<GlobalException>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
