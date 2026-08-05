@@ -1,3 +1,4 @@
+using server.Domain;
 using server.Domain.Enums;
 
 namespace server.Application;
@@ -5,9 +6,11 @@ namespace server.Application;
 public class FinanceService
 {
     private readonly IFinanceRepo _finance;
-    public FinanceService(IFinanceRepo finance)
+    private readonly IDataRepo _data;
+    public FinanceService(IFinanceRepo finance, IDataRepo data)
     {
         _finance = finance;
+        _data = data;
     }
 
     public async Task<List<FinanceDTO>> GetAllFinances()
@@ -60,5 +63,29 @@ public class FinanceService
             CreatedAt = s.CreatedAt,
             financeType = s.financeType
         }).ToList();
+    }
+
+    public async Task AddFinance(AddFinanceDTO addFinanceDTO)
+    {
+        var newFinance = new Finance
+        {
+            FinanceID = Guid.NewGuid(),
+            FinanceNotes = addFinanceDTO.FinanceNotes,
+            Amount = addFinanceDTO.Amount,
+            CreatedAt = addFinanceDTO.CreatedAt,
+            financeType = addFinanceDTO.financeType
+        };
+
+        await _finance.AddFinance(newFinance);
+        await _data.SaveChangesAsync();
+    }
+
+    public async Task RemoveFinance(Guid financeID)
+    {
+        var financeToRemove = await _finance.GetFinanceById(financeID) ??
+            throw new KeyNotFoundException("Finance details of the given ID cannot be found");
+
+        await _finance.RemoveFinance(financeToRemove);
+        await _data.SaveChangesAsync();
     }
 }
