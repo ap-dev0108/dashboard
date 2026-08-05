@@ -15,3 +15,11 @@ public enum MediaStatus
     Planning = 1,
     InProgess = 2
 }
+
+public enum ProjectType
+{
+    WebApp = 0,
+    WixTemplates = 1,
+    MobileApp = 2,
+    Management = 3
+}
