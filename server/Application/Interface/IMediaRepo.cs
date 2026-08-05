@@ -5,7 +5,7 @@ namespace server.Application;
 public interface IMediaRepo
 {
     Task<List<Media>> GetAllMediasAsync();
-    void AddMedia(Media media);
+    Task AddMedia(Media media);
     Task<Media> GetMediaById(Guid id);
-    void RemoveMedia(Media media);
+    Task RemoveMedia(Media media);
 }
