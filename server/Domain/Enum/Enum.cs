@@ -23,3 +23,24 @@ public enum ProjectType
     MobileApp = 2,
     Management = 3
 }
+
+public enum FinanceType
+{
+    Income = 0,
+    Expensees = 1
+}
+
+public enum IncomeType
+{
+    Salary = 0,
+    PocketMoney = 1,
+    Freelance = 2
+}
+
+public enum ExpenseType
+{
+    Rent = 0,
+    Food = 1,
+    Supplies = 2,
+    Miscellaneous = 3,
+}
