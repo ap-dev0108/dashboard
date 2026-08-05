@@ -1,0 +1,12 @@
+F:\Eco system\server\Domain\bin\Debug\net9.0\Domain.deps.json
+F:\Eco system\server\Domain\bin\Debug\net9.0\Domain.dll
+F:\Eco system\server\Domain\bin\Debug\net9.0\Domain.pdb
+F:\Eco system\server\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\Eco system\server\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+F:\Eco system\server\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+F:\Eco system\server\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+F:\Eco system\server\Domain\obj\Debug\net9.0\Domain.sourcelink.json
+F:\Eco system\server\Domain\obj\Debug\net9.0\Domain.dll
+F:\Eco system\server\Domain\obj\Debug\net9.0\refint\Domain.dll
+F:\Eco system\server\Domain\obj\Debug\net9.0\Domain.pdb
+F:\Eco system\server\Domain\obj\Debug\net9.0\ref\Domain.dll
