@@ -18,7 +18,7 @@ public class MediaRepo : IMediaRepo
         return await _appDbContext.Media.AsNoTracking().ToListAsync();
     }
 
-    public void AddMedia(Media media)
+    public async Task AddMedia(Media media)
     {
         _appDbContext.Media.Add(media);
     }
@@ -28,7 +28,7 @@ public class MediaRepo : IMediaRepo
         return await _appDbContext.Media.AsNoTracking().FirstOrDefaultAsync(f => f.MediaID == id);
     }
 
-    public void RemoveMedia(Media media)
+    public async Task RemoveMedia(Media media)
     {
         _appDbContext.Remove(media);
     }
