@@ -8,7 +8,7 @@ public class MediaDTO
     public string MediaTitle { get; set; } = string.Empty;
     public string MediaDescription { get; set; } = string.Empty;
     public string ImageURL { get; set; } = string.Empty;
-    public int Ratings { get; set; }
+    public double Ratings { get; set; }
     public MediaType Type { get; set; }
     public MediaStatus Status { get; set; }
 }
