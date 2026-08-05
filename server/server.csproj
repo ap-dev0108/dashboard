@@ -9,6 +9,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.18" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +23,9 @@
 
   <ItemGroup>
     <ProjectReference Include="Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="Application\Application.csproj" />
+    <ProjectReference Include="Presentation\Presentation.csproj" />
+    <ProjectReference Include="Domain\Domain.csproj" />
   </ItemGroup>
 
 </Project>
