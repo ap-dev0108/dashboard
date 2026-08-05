@@ -1,0 +1,16 @@
+F:\Eco system\server\Application\bin\Debug\net9.0\Application.deps.json
+F:\Eco system\server\Application\bin\Debug\net9.0\Application.dll
+F:\Eco system\server\Application\bin\Debug\net9.0\Application.pdb
+F:\Eco system\server\Application\bin\Debug\net9.0\Domain.dll
+F:\Eco system\server\Application\bin\Debug\net9.0\Domain.pdb
+F:\Eco system\server\Application\obj\Debug\net9.0\Application.csproj.AssemblyReference.cache
+F:\Eco system\server\Application\obj\Debug\net9.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+F:\Eco system\server\Application\obj\Debug\net9.0\Application.AssemblyInfoInputs.cache
+F:\Eco system\server\Application\obj\Debug\net9.0\Application.AssemblyInfo.cs
+F:\Eco system\server\Application\obj\Debug\net9.0\Application.csproj.CoreCompileInputs.cache
+F:\Eco system\server\Application\obj\Debug\net9.0\Application.sourcelink.json
+F:\Eco system\server\Application\obj\Debug\net9.0\Applicat.44B5EDA2.Up2Date
+F:\Eco system\server\Application\obj\Debug\net9.0\Application.dll
+F:\Eco system\server\Application\obj\Debug\net9.0\refint\Application.dll
+F:\Eco system\server\Application\obj\Debug\net9.0\Application.pdb
+F:\Eco system\server\Application\obj\Debug\net9.0\ref\Application.dll
