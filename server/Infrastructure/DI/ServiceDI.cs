@@ -8,6 +8,7 @@ public static class ServiceDI
     public static IServiceCollection ServiceInjection(this IServiceCollection services)
     {
         services.AddScoped<MediaService>();
+        services.AddScoped<ProjectService>();
 
         return services;
     }
