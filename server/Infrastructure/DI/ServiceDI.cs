@@ -1,0 +1,14 @@
+using Microsoft.Extensions.DependencyInjection;
+using server.Application;
+
+namespace server.Infra;
+
+public static class ServiceDI
+{
+    public static IServiceCollection ServiceInjection(this IServiceCollection services)
+    {
+        services.AddScoped<MediaService>();
+
+        return services;
+    }
+}
