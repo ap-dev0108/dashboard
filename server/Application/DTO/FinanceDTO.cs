@@ -10,3 +10,11 @@ public class FinanceDTO
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public FinanceType financeType { get; set; }
 }
+
+public class AddFinanceDTO
+{
+    public string FinanceNotes { get; set; } = string.Empty;
+    public decimal Amount { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public FinanceType financeType { get; set; }
+}
