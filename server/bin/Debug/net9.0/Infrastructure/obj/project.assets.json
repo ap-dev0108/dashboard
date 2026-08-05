@@ -15,95 +15,6 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Http/2.3.11": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "2.3.10",
-          "Microsoft.AspNetCore.WebUtilities": "2.3.10",
-          "Microsoft.Extensions.ObjectPool": "8.0.11",
-          "Microsoft.Extensions.Options": "8.0.2",
-          "Microsoft.Net.Http.Headers": "2.3.10"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Http.Abstractions/2.3.10": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "2.3.9",
-          "System.Text.Encodings.Web": "8.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Http.Features/2.3.9": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "8.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.OpenApi/9.0.18": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OpenApi": "1.6.17"
-        },
-        "compile": {
-          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "Microsoft.AspNetCore.WebUtilities/2.3.10": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Net.Http.Headers": "2.3.9",
-          "System.Text.Encodings.Web": "8.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
         "type": "package",
         "compile": {
@@ -520,7 +431,7 @@
           }
         },
         "build": {
-          "build/net8.0/_._": {}
+          "build/net8.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/9.0.0": {
@@ -700,19 +611,6 @@
           "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
         }
       },
-      "Microsoft.Extensions.ObjectPool/8.0.11": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/Microsoft.Extensions.ObjectPool.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Extensions.ObjectPool.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Extensions.Options/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -747,36 +645,6 @@
         },
         "build": {
           "buildTransitive/net8.0/_._": {}
-        }
-      },
-      "Microsoft.Net.Http.Headers/2.3.10": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "8.0.0",
-          "System.Buffers": "4.6.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.OpenApi/1.6.23": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "related": ".pdb;.xml"
-          }
         }
       },
       "Mono.TextTemplating/3.0.0": {
@@ -826,66 +694,6 @@
           "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "Swashbuckle.AspNetCore.Swagger/9.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OpenApi": "1.6.23"
-        },
-        "compile": {
-          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "Swashbuckle.AspNetCore.SwaggerGen/9.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "9.0.0"
-        },
-        "compile": {
-          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerUI/9.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "System.Buffers/4.6.0": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp2.1/_._": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.1/_._": {}
         }
       },
       "System.CodeDom/6.0.0": {
@@ -1081,28 +889,6 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "System.Text.Encodings.Web/8.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/System.Text.Encodings.Web.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.Text.Encodings.Web.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll": {
-            "assetType": "runtime",
-            "rid": "browser"
-          }
-        }
-      },
       "System.Text.Json/9.0.0": {
         "type": "package",
         "compile": {
@@ -1157,41 +943,6 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
-      },
-      "Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Application": "1.0.0",
-          "Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "9.0.0",
-          "Microsoft.EntityFrameworkCore.Design": "9.0.0",
-          "Microsoft.EntityFrameworkCore.Tools": "9.0.0",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.1"
-        },
-        "compile": {
-          "bin/placeholder/Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Infrastructure.dll": {}
-        }
-      },
-      "Presentation/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Application": "1.0.0",
-          "Domain": "1.0.0",
-          "Infrastructure": "1.0.0",
-          "Microsoft.AspNetCore.Http": "2.3.11",
-          "Microsoft.AspNetCore.OpenApi": "9.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Presentation.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Presentation.dll": {}
-        }
       }
     }
   },
@@ -1212,74 +963,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "Microsoft.AspNetCore.Http/2.3.11": {
-      "sha512": "3H7dPd3knHBMQRvVPYsGlAd7cPI4wk0Hf5H5qhoxoQiEkJ0QdJDNIr34GcKA4CtOw0akQ7US67UpRxWMUeCy2w==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.http/2.3.11",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Http.xml",
-        "microsoft.aspnetcore.http.2.3.11.nupkg.sha512",
-        "microsoft.aspnetcore.http.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Http.Abstractions/2.3.10": {
-      "sha512": "FD6mE5v3qB/sEcnLNni1oHsATuLHIFzsKHCulUZS7iaJez8+TkD432L89DQtU9PfjCkaPO0JOQjB4tS4L8oZXQ==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.http.abstractions/2.3.10",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.xml",
-        "microsoft.aspnetcore.http.abstractions.2.3.10.nupkg.sha512",
-        "microsoft.aspnetcore.http.abstractions.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Http.Features/2.3.9": {
-      "sha512": "nDWDF0YBgElg6f0omqJ8DupmITQg5p4lklBxFpVR83tQQhOG2tw9Fa5ul8b+KywsYBsyfn9DschUmfzOV6RvGw==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.http.features/2.3.9",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
-        "microsoft.aspnetcore.http.features.2.3.9.nupkg.sha512",
-        "microsoft.aspnetcore.http.features.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.OpenApi/9.0.18": {
-      "sha512": "zL+MUFNrqVtnoYa/21c8Nq67Xcj569NLhjah8nhKubxA8s1zkhjhA+CzXIBwpjHWYKZ4JNH029S2RJvBotsQqQ==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.openapi/9.0.18",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll",
-        "lib/net9.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.9.0.18.nupkg.sha512",
-        "microsoft.aspnetcore.openapi.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.WebUtilities/2.3.10": {
-      "sha512": "7LpnJixI2B3uh+enEw/6xKJS6s7A/N5gRWIMc0NZsKjKXJ64mn7bA09KtjWuSE/SnMpgycLPudFCNtMipRp6yQ==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.webutilities/2.3.10",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
-        "microsoft.aspnetcore.webutilities.2.3.10.nupkg.sha512",
-        "microsoft.aspnetcore.webutilities.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
@@ -2638,25 +2321,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.ObjectPool/8.0.11": {
-      "sha512": "6ApKcHNJigXBfZa6XlDQ8feJpq7SG1ogZXg6M4FiNzgd6irs3LUAzo0Pfn4F2ZI9liGnH1XIBR/OtSbZmJAV5w==",
-      "type": "package",
-      "path": "microsoft.extensions.objectpool/8.0.11",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net462/Microsoft.Extensions.ObjectPool.dll",
-        "lib/net462/Microsoft.Extensions.ObjectPool.xml",
-        "lib/net8.0/Microsoft.Extensions.ObjectPool.dll",
-        "lib/net8.0/Microsoft.Extensions.ObjectPool.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.xml",
-        "microsoft.extensions.objectpool.8.0.11.nupkg.sha512",
-        "microsoft.extensions.objectpool.nuspec"
-      ]
-    },
     "Microsoft.Extensions.Options/9.0.0": {
       "sha512": "y2146b3jrPI3Q0lokKXdKLpmXqakYbDIPDV6r3M8SqvSf45WwOTzkyfDpxnZXJsJQEpAsAqjUq5Pu8RCJMjubg==",
       "type": "package",
@@ -2730,34 +2394,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Net.Http.Headers/2.3.10": {
-      "sha512": "WjHfw2Esfhd8RcdVNM61gS5z6wGGA5rtPIPJTjSe9Y/k8aarXxHWQhOfMqFa+wE/quTUrgs9h+dddyEDsTN/IA==",
-      "type": "package",
-      "path": "microsoft.net.http.headers/2.3.10",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll",
-        "lib/netstandard2.0/Microsoft.Net.Http.Headers.xml",
-        "microsoft.net.http.headers.2.3.10.nupkg.sha512",
-        "microsoft.net.http.headers.nuspec"
-      ]
-    },
-    "Microsoft.OpenApi/1.6.23": {
-      "sha512": "tZ1I0KXnn98CWuV8cpI247A17jaY+ILS9vvF7yhI0uPPEqF4P1d7BWL5Uwtel10w9NucllHB3nTkfYTAcHAh8g==",
-      "type": "package",
-      "path": "microsoft.openapi/1.6.23",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/netstandard2.0/Microsoft.OpenApi.dll",
-        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
-        "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.1.6.23.nupkg.sha512",
-        "microsoft.openapi.nuspec"
-      ]
-    },
     "Mono.TextTemplating/3.0.0": {
       "sha512": "YqueG52R/Xej4VVbKuRIodjiAhV0HR/XVbLbNrJhCZnzjnSjgMJ/dCdV0akQQxavX6hp/LC6rqLGLcXeQYU7XA==",
       "type": "package",
@@ -2805,80 +2441,6 @@
         "npgsql.entityframeworkcore.postgresql.9.0.1.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
-      ]
-    },
-    "Swashbuckle.AspNetCore.Swagger/9.0.0": {
-      "sha512": "xQw4L8S//eqxAuVLn8mvGCpz2cqfuTEUtFBdaWJ/YkQd8dnCXMfAlBhbLCrZrBcl0R9KhQLtW8EU+V2RGv1pkw==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swagger/9.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.pdb",
-        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.pdb",
-        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "package-readme.md",
-        "swashbuckle.aspnetcore.swagger.9.0.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swagger.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerGen/9.0.0": {
-      "sha512": "1HjvxZyrPlXrwbq7NONdJy6FUl6mLMTb+bECziX6JKX8Kk46olcMFLSBIUsG8bw63lF8HlyGLJgHfWHbmE1BgA==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggergen/9.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "package-readme.md",
-        "swashbuckle.aspnetcore.swaggergen.9.0.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggergen.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerUI/9.0.0": {
-      "sha512": "g3m4AwjzCk7HNxHJs5fXlGPw4P2uRA6qLqbu1qrSyboHvj/Efg5nUYsnWq4OwziWlRhkFKwPJ4SRGrqgYQEUWA==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggerui/9.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "package-readme.md",
-        "swashbuckle.aspnetcore.swaggerui.9.0.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggerui.nuspec"
-      ]
-    },
-    "System.Buffers/4.6.0": {
-      "sha512": "lN6tZi7Q46zFzAbRYXTIvfXcyvQQgxnY7Xm6C6xQ9784dEL1amjM6S6Iw4ZpsvesAKnRVsM4scrDQaDqSClkjA==",
-      "type": "package",
-      "path": "system.buffers/4.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "PACKAGE.md",
-        "buildTransitive/net461/System.Buffers.targets",
-        "buildTransitive/net462/_._",
-        "lib/net462/System.Buffers.dll",
-        "lib/net462/System.Buffers.xml",
-        "lib/netcoreapp2.1/_._",
-        "lib/netstandard2.0/System.Buffers.dll",
-        "lib/netstandard2.0/System.Buffers.xml",
-        "system.buffers.4.6.0.nupkg.sha512",
-        "system.buffers.nuspec"
       ]
     },
     "System.CodeDom/6.0.0": {
@@ -3169,41 +2731,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Encodings.Web/8.0.0": {
-      "sha512": "yev/k9GHAEGx2Rg3/tU6MQh4HGBXJs70y7j1LaM1i/ER9po+6nnQ6RRqTJn1E7Xu0fbIFK80Nh5EoODxrbxwBQ==",
-      "type": "package",
-      "path": "system.text.encodings.web/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Text.Encodings.Web.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Text.Encodings.Web.targets",
-        "lib/net462/System.Text.Encodings.Web.dll",
-        "lib/net462/System.Text.Encodings.Web.xml",
-        "lib/net6.0/System.Text.Encodings.Web.dll",
-        "lib/net6.0/System.Text.Encodings.Web.xml",
-        "lib/net7.0/System.Text.Encodings.Web.dll",
-        "lib/net7.0/System.Text.Encodings.Web.xml",
-        "lib/net8.0/System.Text.Encodings.Web.dll",
-        "lib/net8.0/System.Text.Encodings.Web.xml",
-        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
-        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
-        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
-        "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.xml",
-        "runtimes/browser/lib/net7.0/System.Text.Encodings.Web.dll",
-        "runtimes/browser/lib/net7.0/System.Text.Encodings.Web.xml",
-        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.dll",
-        "runtimes/browser/lib/net8.0/System.Text.Encodings.Web.xml",
-        "system.text.encodings.web.8.0.0.nupkg.sha512",
-        "system.text.encodings.web.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
     "System.Text.Json/9.0.0": {
       "sha512": "js7+qAu/9mQvnhA4EfGMZNEzXtJCDxgkgj8ohuxq/Qxv+R56G+ljefhiJHOxTNiw54q8vmABCWUwkMulNdlZ4A==",
       "type": "package",
@@ -3306,36 +2833,23 @@
     },
     "Application/1.0.0": {
       "type": "project",
-      "path": "Application/Application.csproj",
-      "msbuildProject": "Application/Application.csproj"
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
-      "path": "Domain/Domain.csproj",
-      "msbuildProject": "Domain/Domain.csproj"
-    },
-    "Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "Infrastructure/Infrastructure.csproj",
-      "msbuildProject": "Infrastructure/Infrastructure.csproj"
-    },
-    "Presentation/1.0.0": {
-      "type": "project",
-      "path": "Presentation/Presentation.csproj",
-      "msbuildProject": "Presentation/Presentation.csproj"
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "Application >= 1.0.0",
       "Domain >= 1.0.0",
-      "Infrastructure >= 1.0.0",
-      "Microsoft.AspNetCore.OpenApi >= 9.0.18",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.1",
-      "Presentation >= 1.0.0",
-      "Swashbuckle.AspNetCore.Swagger >= 9.0.0",
-      "Swashbuckle.AspNetCore.SwaggerGen >= 9.0.0",
-      "Swashbuckle.AspNetCore.SwaggerUI >= 9.0.0"
+      "Microsoft.EntityFrameworkCore >= 9.0.0",
+      "Microsoft.EntityFrameworkCore.Design >= 9.0.0",
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.0",
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.1"
     ]
   },
   "packageFolders": {
@@ -3344,11 +2858,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Eco system\\server\\server.csproj",
-      "projectName": "server",
-      "projectPath": "F:\\Eco system\\server\\server.csproj",
+      "projectUniqueName": "F:\\Eco system\\server\\Infrastructure\\Infrastructure.csproj",
+      "projectName": "Infrastructure",
+      "projectPath": "F:\\Eco system\\server\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\aryan\\.nuget\\packages\\",
-      "outputPath": "F:\\Eco system\\server\\obj\\",
+      "outputPath": "F:\\Eco system\\server\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aryan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3368,12 +2882,6 @@
             },
             "F:\\Eco system\\server\\Domain\\Domain.csproj": {
               "projectPath": "F:\\Eco system\\server\\Domain\\Domain.csproj"
-            },
-            "F:\\Eco system\\server\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "F:\\Eco system\\server\\Infrastructure\\Infrastructure.csproj"
-            },
-            "F:\\Eco system\\server\\Presentation\\Presentation.csproj": {
-              "projectPath": "F:\\Eco system\\server\\Presentation\\Presentation.csproj"
             }
           }
         }
@@ -3394,25 +2902,21 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
-          "Microsoft.AspNetCore.OpenApi": {
+          "Microsoft.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[9.0.18, )"
+            "version": "[9.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "target": "Package",
+            "version": "[9.0.0, )"
           },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[9.0.1, )"
-          },
-          "Swashbuckle.AspNetCore.Swagger": {
-            "target": "Package",
-            "version": "[9.0.0, )"
-          },
-          "Swashbuckle.AspNetCore.SwaggerGen": {
-            "target": "Package",
-            "version": "[9.0.0, )"
-          },
-          "Swashbuckle.AspNetCore.SwaggerUI": {
-            "target": "Package",
-            "version": "[9.0.0, )"
           }
         },
         "imports": [
@@ -3427,9 +2931,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

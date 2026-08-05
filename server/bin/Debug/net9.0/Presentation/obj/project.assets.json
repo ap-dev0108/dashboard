@@ -68,7 +68,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/9.0.18": {
+      "Microsoft.AspNetCore.OpenApi/9.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.6.17"
@@ -766,7 +766,7 @@
           }
         }
       },
-      "Microsoft.OpenApi/1.6.23": {
+      "Microsoft.OpenApi/1.6.17": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -827,57 +827,6 @@
             "related": ".xml"
           }
         }
-      },
-      "Swashbuckle.AspNetCore.Swagger/9.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OpenApi": "1.6.23"
-        },
-        "compile": {
-          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "Swashbuckle.AspNetCore.SwaggerGen/9.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "9.0.0"
-        },
-        "compile": {
-          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerUI/9.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       },
       "System.Buffers/4.6.0": {
         "type": "package",
@@ -1175,23 +1124,6 @@
         "runtime": {
           "bin/placeholder/Infrastructure.dll": {}
         }
-      },
-      "Presentation/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Application": "1.0.0",
-          "Domain": "1.0.0",
-          "Infrastructure": "1.0.0",
-          "Microsoft.AspNetCore.Http": "2.3.11",
-          "Microsoft.AspNetCore.OpenApi": "9.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Presentation.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Presentation.dll": {}
-        }
       }
     }
   },
@@ -1253,10 +1185,10 @@
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.OpenApi/9.0.18": {
-      "sha512": "zL+MUFNrqVtnoYa/21c8Nq67Xcj569NLhjah8nhKubxA8s1zkhjhA+CzXIBwpjHWYKZ4JNH029S2RJvBotsQqQ==",
+    "Microsoft.AspNetCore.OpenApi/9.0.0": {
+      "sha512": "FqUK5j1EOPNuFT7IafltZQ3cakqhSwVzH5ZW1MhZDe4pPXs9sJ2M5jom1Omsu+mwF2tNKKlRAzLRHQTZzbd+6Q==",
       "type": "package",
-      "path": "microsoft.aspnetcore.openapi/9.0.18",
+      "path": "microsoft.aspnetcore.openapi/9.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1265,7 +1197,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll",
         "lib/net9.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.9.0.18.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
@@ -2743,10 +2675,10 @@
         "microsoft.net.http.headers.nuspec"
       ]
     },
-    "Microsoft.OpenApi/1.6.23": {
-      "sha512": "tZ1I0KXnn98CWuV8cpI247A17jaY+ILS9vvF7yhI0uPPEqF4P1d7BWL5Uwtel10w9NucllHB3nTkfYTAcHAh8g==",
+    "Microsoft.OpenApi/1.6.17": {
+      "sha512": "Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
       "type": "package",
-      "path": "microsoft.openapi/1.6.23",
+      "path": "microsoft.openapi/1.6.17",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2754,7 +2686,7 @@
         "lib/netstandard2.0/Microsoft.OpenApi.dll",
         "lib/netstandard2.0/Microsoft.OpenApi.pdb",
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.1.6.23.nupkg.sha512",
+        "microsoft.openapi.1.6.17.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
     },
@@ -2805,60 +2737,6 @@
         "npgsql.entityframeworkcore.postgresql.9.0.1.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
-      ]
-    },
-    "Swashbuckle.AspNetCore.Swagger/9.0.0": {
-      "sha512": "xQw4L8S//eqxAuVLn8mvGCpz2cqfuTEUtFBdaWJ/YkQd8dnCXMfAlBhbLCrZrBcl0R9KhQLtW8EU+V2RGv1pkw==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swagger/9.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.pdb",
-        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.pdb",
-        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "package-readme.md",
-        "swashbuckle.aspnetcore.swagger.9.0.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swagger.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerGen/9.0.0": {
-      "sha512": "1HjvxZyrPlXrwbq7NONdJy6FUl6mLMTb+bECziX6JKX8Kk46olcMFLSBIUsG8bw63lF8HlyGLJgHfWHbmE1BgA==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggergen/9.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "package-readme.md",
-        "swashbuckle.aspnetcore.swaggergen.9.0.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggergen.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerUI/9.0.0": {
-      "sha512": "g3m4AwjzCk7HNxHJs5fXlGPw4P2uRA6qLqbu1qrSyboHvj/Efg5nUYsnWq4OwziWlRhkFKwPJ4SRGrqgYQEUWA==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggerui/9.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
-        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
-        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "package-readme.md",
-        "swashbuckle.aspnetcore.swaggerui.9.0.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
     "System.Buffers/4.6.0": {
@@ -3306,23 +3184,18 @@
     },
     "Application/1.0.0": {
       "type": "project",
-      "path": "Application/Application.csproj",
-      "msbuildProject": "Application/Application.csproj"
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
-      "path": "Domain/Domain.csproj",
-      "msbuildProject": "Domain/Domain.csproj"
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     },
     "Infrastructure/1.0.0": {
       "type": "project",
-      "path": "Infrastructure/Infrastructure.csproj",
-      "msbuildProject": "Infrastructure/Infrastructure.csproj"
-    },
-    "Presentation/1.0.0": {
-      "type": "project",
-      "path": "Presentation/Presentation.csproj",
-      "msbuildProject": "Presentation/Presentation.csproj"
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3330,12 +3203,8 @@
       "Application >= 1.0.0",
       "Domain >= 1.0.0",
       "Infrastructure >= 1.0.0",
-      "Microsoft.AspNetCore.OpenApi >= 9.0.18",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.1",
-      "Presentation >= 1.0.0",
-      "Swashbuckle.AspNetCore.Swagger >= 9.0.0",
-      "Swashbuckle.AspNetCore.SwaggerGen >= 9.0.0",
-      "Swashbuckle.AspNetCore.SwaggerUI >= 9.0.0"
+      "Microsoft.AspNetCore.Http >= 2.3.11",
+      "Microsoft.AspNetCore.OpenApi >= 9.0.0"
     ]
   },
   "packageFolders": {
@@ -3344,11 +3213,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Eco system\\server\\server.csproj",
-      "projectName": "server",
-      "projectPath": "F:\\Eco system\\server\\server.csproj",
+      "projectUniqueName": "F:\\Eco system\\server\\Presentation\\Presentation.csproj",
+      "projectName": "Presentation",
+      "projectPath": "F:\\Eco system\\server\\Presentation\\Presentation.csproj",
       "packagesPath": "C:\\Users\\aryan\\.nuget\\packages\\",
-      "outputPath": "F:\\Eco system\\server\\obj\\",
+      "outputPath": "F:\\Eco system\\server\\Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aryan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3371,9 +3240,6 @@
             },
             "F:\\Eco system\\server\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "F:\\Eco system\\server\\Infrastructure\\Infrastructure.csproj"
-            },
-            "F:\\Eco system\\server\\Presentation\\Presentation.csproj": {
-              "projectPath": "F:\\Eco system\\server\\Presentation\\Presentation.csproj"
             }
           }
         }
@@ -3394,23 +3260,11 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Http": {
+            "target": "Package",
+            "version": "[2.3.11, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
-            "target": "Package",
-            "version": "[9.0.18, )"
-          },
-          "Npgsql.EntityFrameworkCore.PostgreSQL": {
-            "target": "Package",
-            "version": "[9.0.1, )"
-          },
-          "Swashbuckle.AspNetCore.Swagger": {
-            "target": "Package",
-            "version": "[9.0.0, )"
-          },
-          "Swashbuckle.AspNetCore.SwaggerGen": {
-            "target": "Package",
-            "version": "[9.0.0, )"
-          },
-          "Swashbuckle.AspNetCore.SwaggerUI": {
             "target": "Package",
             "version": "[9.0.0, )"
           }
@@ -3427,9 +3281,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
