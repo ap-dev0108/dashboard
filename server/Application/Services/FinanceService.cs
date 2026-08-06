@@ -24,7 +24,7 @@ public class FinanceService
             FinanceNotes = s.FinanceNotes,
             Amount = s.Amount,
             CreatedAt = s.CreatedAt,
-            financeType = s.financeType,
+            financeType = s.financeType
         }).ToList();
     }
 
@@ -86,6 +86,43 @@ public class FinanceService
             throw new KeyNotFoundException("Finance details of the given ID cannot be found");
 
         await _finance.RemoveFinance(financeToRemove);
+        await _data.SaveChangesAsync();
+    }
+
+    public async Task<FinancialDetails> GetFinanceData()
+    {
+        var transactions = await _finance.GetAllFinances();
+        var totalIncome = _finance.TotalIncome();
+        var totalExpenses = _finance.TotalExpenses();
+
+        var netAmount = totalIncome - totalExpenses;
+
+        return new FinancialDetails
+        {
+            TotalIncomeAmt = totalIncome,
+            TotalExpAmt = totalExpenses,
+            NetAmt = netAmount,
+            Transactions = transactions.Select(s => new FinanceDTO
+            {
+                FinanceID = s.FinanceID,
+                FinanceNotes = s.FinanceNotes,
+                Amount = s.Amount,
+                CreatedAt = s.CreatedAt,
+                financeType = s.financeType
+            }).ToList()
+        };
+    }
+
+    public async Task EditFinances(Guid financeID, AddFinanceDTO financeDTO)
+    {
+        var finances = await _finance.GetFinanceById(financeID) ??
+            throw new KeyNotFoundException("Finances with this ID cannot be found");
+
+        finances.FinanceNotes = financeDTO.FinanceNotes;
+        finances.financeType = financeDTO.financeType;
+        finances.CreatedAt = financeDTO.CreatedAt;
+        finances.Amount = financeDTO.Amount;
+
         await _data.SaveChangesAsync();
     }
 }
