@@ -39,4 +39,16 @@ public class FinanceRepo : IFinanceRepo
     {
         _db.Finances.Remove(finance);
     }
+
+    public decimal TotalIncome()
+    {
+        var total = _db.Finances.Where(x => x.financeType == FinanceType.Income).Sum(s => s.Amount);
+        return total;
+    }
+
+    public decimal TotalExpenses()
+    {
+        var total = _db.Finances.Where(x => x.financeType == FinanceType.Expensees).Sum(s => s.Amount);
+        return total;
+    }
 }
