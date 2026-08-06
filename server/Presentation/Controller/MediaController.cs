@@ -66,4 +66,17 @@ public class MediaController : ControllerBase
             Data = id
         });
     }
+
+    [HttpPut("/editMedia")]
+    public async Task<IActionResult> EditMedia(Guid mediaID, AddMediaDTO addMediaDTO)
+    {
+        await _mediaServices.EditMedia(mediaID, addMediaDTO);
+
+        return Ok(new Response<Guid>
+        {
+            Success = true,
+            Message = "Media Edited",
+            Data = mediaID
+        });
+    }
 }
