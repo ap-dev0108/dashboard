@@ -9,6 +9,7 @@ public static class ServiceDI
     {
         services.AddScoped<MediaService>();
         services.AddScoped<ProjectService>();
+        services.AddScoped<FinanceService>();
 
         return services;
     }
