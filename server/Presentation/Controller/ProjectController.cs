@@ -30,6 +30,7 @@ public class ProjectController : ControllerBase
 
     [HttpGet("/projectId")]
     public async Task<IActionResult> GetProjectsById(Guid id)
+
     {
         var projectById = await _projects.GetProjectsById(id);
 
@@ -40,7 +41,6 @@ public class ProjectController : ControllerBase
             Data = projectById
         });
     }
-
     [HttpGet("/type")]
     public async Task<IActionResult> GetProjectsByType(string type)
     {
@@ -77,6 +77,18 @@ public class ProjectController : ControllerBase
             Success = true,
             Message = "Project Removed",
             Data = id
+        });
+    }
+
+    [HttpPut("/editProjects")]
+    public async Task<IActionResult> EditProjects(Guid projectID, AddProjectsDTO dto)
+    {
+        await _projects.EditProjects(projectID, dto);
+
+        return Ok(new Response<Guid>
+        {
+            Success = true,
+            Message = "Project edited successfully"
         });
     }
 }
