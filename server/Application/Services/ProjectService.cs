@@ -29,7 +29,6 @@ public class ProjectService
             GithubURL = s.GithubURL
         }).ToList();
     }
-
     public async Task<ProjectsDTO> GetProjectsById(Guid id)
     {
         var projectById = await _projectRepo.GetProjectsByID(id) ??
@@ -47,7 +46,6 @@ public class ProjectService
 
         return project;
     }
-
     public async Task<IQueryable<ProjectsDTO>> GetProjectsByType(string type)
     {
         if (!Enum.TryParse<ProjectType>(type, true, out var projectType))
@@ -68,7 +66,6 @@ public class ProjectService
         });
 
     }
-
     public async Task AddProjects(AddProjectsDTO addProjectsDTO)
     {
         var project = new Projects
@@ -84,13 +81,25 @@ public class ProjectService
         await _projectRepo.AddProjects(project);
         await _data.SaveChangesAsync();
     }
-
     public async Task RemoveProjects(Guid projectID)
     {
         var project = await _projectRepo.GetProjectsByID(projectID) ??
             throw new KeyNotFoundException("Project with the given ID cannot be foudn");
 
         await _projectRepo.RemoveProjects(project);
+        await _data.SaveChangesAsync();
+    }
+    public async Task EditProjects(Guid projectID, AddProjectsDTO addProjectsDTO)
+    {
+        var project = await _projectRepo.GetProjectsByID(projectID) ??
+            throw new KeyNotFoundException("Project with the given ID cannot be found");
+
+        project.ProjectTitle = addProjectsDTO.ProjectTitle;
+        project.projectType = addProjectsDTO.projectType;
+        project.LiveURL = addProjectsDTO.LiveURL;
+        project.ImageURL = addProjectsDTO.ImageURL;
+        project.GithubURL = addProjectsDTO.GithubURL;
+
         await _data.SaveChangesAsync();
     }
 }
