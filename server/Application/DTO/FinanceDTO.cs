@@ -11,6 +11,14 @@ public class FinanceDTO
     public FinanceType financeType { get; set; }
 }
 
+public class FinancialDetails
+{
+    public List<FinanceDTO> Transactions {get; set;} = [];
+    public decimal TotalIncomeAmt {get; set;}
+    public decimal TotalExpAmt {get; set;}
+    public decimal NetAmt {get; set;}
+}
+
 public class AddFinanceDTO
 {
     public string FinanceNotes { get; set; } = string.Empty;
