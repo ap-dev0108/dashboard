@@ -77,4 +77,28 @@ public class FinanceController : ControllerBase
             Data = financeID
         });
     }
+
+    [HttpGet("/getFinanceData")]
+    public async Task<IActionResult> GetFinanceData()
+    {
+        var data = await _financeService.GetFinanceData();
+
+        return Ok(new Response<FinancialDetails>
+        {
+            Success = true,
+            Message = "Financial data fetched successfully",
+            Data = data
+        });
+    }
+
+    [HttpPut("/editFinances")]
+    public async Task<IActionResult> EditFinances(Guid financeID, AddFinanceDTO addFinanceDTO)
+    {
+        await _financeService.EditFinances(financeID, addFinanceDTO);
+        return Ok(new Response<Guid>
+        {
+            Success = true,
+            Message = "Financial Data has been edited"
+        });
+    }
 }
