@@ -10,4 +10,6 @@ public interface IFinanceRepo
     Task<List<Finance>> FilterByType(FinanceType financeType);
     Task AddFinance(Finance finance);
     Task RemoveFinance(Finance finance);
+    decimal TotalIncome();
+    decimal TotalExpenses();
 }
