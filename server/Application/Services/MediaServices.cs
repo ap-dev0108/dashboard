@@ -70,4 +70,19 @@ public class MediaService
         await _media.RemoveMedia(mediaToRemove);
         await _data.SaveChangesAsync();
     }
+
+    public async Task EditMedia(Guid id, AddMediaDTO addMediaDTO)
+    {
+        var media = await _media.GetMediaById(id) ??
+            throw new KeyNotFoundException("Media with this ID cannot be found");
+
+        media.MediaTitle = addMediaDTO.MediaTitle;
+        media.MediaDescription = addMediaDTO.MediaDescription;
+        media.ImageURL = addMediaDTO.ImageURL;
+        media.Ratings = addMediaDTO.Ratings;
+        media.Type = addMediaDTO.Type;
+        media.Status = addMediaDTO.Status;
+
+        await _data.SaveChangesAsync();
+    }
 }
