@@ -1,11 +1,15 @@
-import { Outlet } from "react-router-dom";
-import { Header } from "../components/Headers/Header";
+import { Sidebar } from "../components/Sidebar";
+import AllFinances from "../pages/finance";
+import Medias from "../pages/media";
 
 export const RootLayout = () => {
   return (
-    <div className="">
-      <Header />
-      <Outlet />
-    </div>
+    <section className="grid grid-cols-2 gap-5">
+      <Sidebar />
+      <div className="grid grid-cols-2 gap-6">
+        <AllFinances />
+        <Medias />
+      </div>
+    </section>
   );
 };
