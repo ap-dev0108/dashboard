@@ -13,7 +13,7 @@ public class FinanceController : ControllerBase
         _financeService = financeService;
     }
 
-    [HttpGet("/allFinances")]
+    [HttpGet("allFinances")]
     public async Task<IActionResult> GetAllFinances()
     {
         var financesList = await _financeService.GetAllFinances();
@@ -26,7 +26,7 @@ public class FinanceController : ControllerBase
         });
     }
 
-    [HttpGet("/financeId")]
+    [HttpGet("financeId")]
     public async Task<IActionResult> GetFinancesById(Guid financeID)
     {
         var finance = await _financeService.GetFinanceById(financeID);
@@ -39,7 +39,7 @@ public class FinanceController : ControllerBase
         });
     }
 
-    [HttpGet("/financeType")]
+    [HttpGet("financeType")]
     public async Task<IActionResult> FilterByType(string type)
     {
         var financeByType = await _financeService.FilterByType(type);
@@ -52,7 +52,7 @@ public class FinanceController : ControllerBase
         });
     }
 
-    [HttpPost("/addFinances")]
+    [HttpPost("addFinances")]
     public async Task<IActionResult> AddFinances(AddFinanceDTO addFinanceDTO)
     {
         await _financeService.AddFinance(addFinanceDTO);
@@ -65,7 +65,7 @@ public class FinanceController : ControllerBase
         });
     }
 
-    [HttpDelete("/removeFinance")]
+    [HttpDelete("removeFinance")]
     public async Task<IActionResult> RemoveFinance(Guid financeID)
     {
         await _financeService.RemoveFinance(financeID);
@@ -78,7 +78,7 @@ public class FinanceController : ControllerBase
         });
     }
 
-    [HttpGet("/getFinanceData")]
+    [HttpGet("getFinanceData")]
     public async Task<IActionResult> GetFinanceData()
     {
         var data = await _financeService.GetFinanceData();
@@ -91,7 +91,7 @@ public class FinanceController : ControllerBase
         });
     }
 
-    [HttpPut("/editFinances")]
+    [HttpPut("editFinances")]
     public async Task<IActionResult> EditFinances(Guid financeID, AddFinanceDTO addFinanceDTO)
     {
         await _financeService.EditFinances(financeID, addFinanceDTO);

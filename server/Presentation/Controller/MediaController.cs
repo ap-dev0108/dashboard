@@ -5,7 +5,6 @@ namespace server.Presentation;
 
 [ApiController]
 [Route("api/[controller]")]
-[ApiExplorerSettings(IgnoreApi = false)]
 public class MediaController : ControllerBase
 {
     private readonly MediaService _mediaServices;
@@ -15,7 +14,7 @@ public class MediaController : ControllerBase
         _mediaServices = mediaService;
     }
 
-    [HttpGet("/allMedias")]
+    [HttpGet("allMedias")]
     public async Task<IActionResult> GetAllMedias()
     {
         var media = await _mediaServices.GetMediaDTOsAsync();
@@ -28,7 +27,7 @@ public class MediaController : ControllerBase
         });
     }
 
-    [HttpGet("/mediaId")]
+    [HttpGet("mediaId")]
     public async Task<IActionResult> GetMediaById(Guid id)
     {
         var media = await _mediaServices.GetMediaById(id);
@@ -41,7 +40,7 @@ public class MediaController : ControllerBase
         });
     }
 
-    [HttpPost("/addMedia")]
+    [HttpPost("addMedia")]
     public async Task<IActionResult> AddMedias(AddMediaDTO mediaDTO)
     {
         await _mediaServices.AddMedia(mediaDTO);
@@ -54,7 +53,7 @@ public class MediaController : ControllerBase
         });
     }
 
-    [HttpDelete("/removeMedia")]
+    [HttpDelete("removeMedia")]
     public async Task<IActionResult> RemoveMedias(Guid id)
     {
         await _mediaServices.RemoveMedia(id);
@@ -67,7 +66,7 @@ public class MediaController : ControllerBase
         });
     }
 
-    [HttpPut("/editMedia")]
+    [HttpPut("editMedia")]
     public async Task<IActionResult> EditMedia(Guid mediaID, AddMediaDTO addMediaDTO)
     {
         await _mediaServices.EditMedia(mediaID, addMediaDTO);

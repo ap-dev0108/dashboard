@@ -15,7 +15,7 @@ public class ProjectController : ControllerBase
         _projects = project;
     }
 
-    [HttpGet("/getAll")]
+    [HttpGet("getAll")]
     public async Task<IActionResult> GetAllProjects()
     {
         var projectList = await _projects.GetAllProjects();
@@ -28,7 +28,7 @@ public class ProjectController : ControllerBase
         });
     }
 
-    [HttpGet("/projectId")]
+    [HttpGet("projectId")]
     public async Task<IActionResult> GetProjectsById(Guid id)
 
     {
@@ -41,7 +41,7 @@ public class ProjectController : ControllerBase
             Data = projectById
         });
     }
-    [HttpGet("/type")]
+    [HttpGet("type")]
     public async Task<IActionResult> GetProjectsByType(string type)
     {
         var project = await _projects.GetProjectsByType(type);
@@ -54,7 +54,7 @@ public class ProjectController : ControllerBase
         });
     }
 
-    [HttpPost("/add")]
+    [HttpPost("add")]
     public async Task<IActionResult> AddProjects(AddProjectsDTO addProjectsDTO)
     {
         await _projects.AddProjects(addProjectsDTO);
@@ -67,7 +67,7 @@ public class ProjectController : ControllerBase
         });
     }
 
-    [HttpDelete("/remove")]
+    [HttpDelete("remove")]
     public async Task<IActionResult> RemoveProjects(Guid id)
     {
         await _projects.RemoveProjects(id);
@@ -80,7 +80,7 @@ public class ProjectController : ControllerBase
         });
     }
 
-    [HttpPut("/editProjects")]
+    [HttpPut("editProjects")]
     public async Task<IActionResult> EditProjects(Guid projectID, AddProjectsDTO dto)
     {
         await _projects.EditProjects(projectID, dto);
