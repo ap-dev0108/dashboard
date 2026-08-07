@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Sidebar = () => {
   return (
     <main className="px-10 py-4 max-w-100 border-r border-r-[#E5E7EB] max-h-screen">
@@ -8,11 +10,11 @@ export const Sidebar = () => {
           </h1>
         </div>
         <div>
-          <ul className="font-menu text-menu-labels">
-            <li> Home </li>
-            <li> Finance </li>
-            <li> Media </li>
-            <li> Projects </li>
+          <ul className="font-menu text-menu-labels flex justify-between">
+            <Link to="/"> Home </Link>
+            <Link to="/finances"> Finance </Link>
+            <Link to="/media"> Media </Link>
+            <Link to="/projects"> Projects </Link>
           </ul>
         </div>
       </aside>
