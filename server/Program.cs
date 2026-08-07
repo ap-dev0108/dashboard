@@ -12,6 +12,17 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddControllers();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("React", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173");
+        policy.AllowAnyHeader();
+        policy.AllowAnyMethod();
+        policy.AllowAnyOrigin();
+    });
+});
+
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -28,7 +39,6 @@ builder.Services.RepoDI();
 builder.Services.ServiceInjection();
 
 var app = builder.Build();
-
 app.UseMiddleware<GlobalException>();
 
 // Configure the HTTP request pipeline.
@@ -42,4 +52,5 @@ if (app.Environment.IsDevelopment())
 
 app.MapControllers();
 app.UseHttpsRedirection();
+app.UseCors("React");
 app.Run();
