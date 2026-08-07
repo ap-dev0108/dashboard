@@ -2,6 +2,7 @@ import { RootLayout } from "../layout/RootLayout";
 import AllFinances from "../pages/finance";
 import { createBrowserRouter } from "react-router-dom";
 import Medias from "../pages/media";
+import Home from "../pages/Home";
 
 export const AppRouter = createBrowserRouter([
   {
@@ -10,12 +11,16 @@ export const AppRouter = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: AllFinances,
+        Component: Home,
       },
       {
         path: "/media",
-        Component: Medias
-      }
+        Component: Medias,
+      },
+      {
+        path: "/finances",
+        Component: AllFinances,
+      },
     ],
   },
 ]);
