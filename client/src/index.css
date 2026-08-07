@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --text-aryan-display: 56px;
+  --color-aryan-title: #2563eb;
+  --font-aryan: "Poppins", sans-serif;
+  --font-menu: "Manrope", sans-serif;
+  --color-menu-labels: #6b7280;
+}
