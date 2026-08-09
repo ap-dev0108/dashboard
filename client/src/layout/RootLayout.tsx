@@ -1,15 +1,19 @@
+import { Outlet } from "react-router-dom";
 import { Sidebar } from "../components/Sidebar";
-import AllFinances from "../pages/finance";
-import Medias from "../pages/media";
+import { TopNav } from "../components/Header";
 
 export const RootLayout = () => {
   return (
-    <section className="grid grid-cols-2 gap-5">
+    <div className="flex h-screen">
+      {/* Sidebar */}
       <Sidebar />
-      <div className="grid grid-cols-2 gap-6">
-        <AllFinances />
-        <Medias />
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Top Bar */}
+        <TopNav />
+        <Outlet />
       </div>
-    </section>
+    </div>
   );
 };
