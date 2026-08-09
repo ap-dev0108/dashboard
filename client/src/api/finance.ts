@@ -1,4 +1,4 @@
-import type { Finance } from "../types/FinanceTypes";
+import type { Finance, FinanceData } from "../types/FinanceTypes";
 import type { Response } from "../types/response";
 import { api } from "./axios";
 
@@ -27,7 +27,7 @@ export const removeFinanceData = async (financeID: string) : Promise<Response<Fi
     return response.data;
 }
 
-export const financialCalculation = async () : Promise<Response<Finance>> => {
+export const financialCalculation = async () : Promise<Response<FinanceData[]>> => {
     const response = await api.get("/Finance/getFinanceData");
     return response.data;
 }
