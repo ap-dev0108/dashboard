@@ -1,8 +1,13 @@
-import { RootLayout } from "../layout/RootLayout";
-import AllFinances from "../pages/finance";
 import { createBrowserRouter } from "react-router-dom";
-import Medias from "../pages/media";
+
+import { RootLayout } from "../layout/RootLayout";
+
 import Home from "../pages/Home";
+import LoginPage from "../pages/login";
+import Medias from "../pages/media";
+import AllFinances from "../pages/finance";
+import ProjectsSection from "../pages/project";
+import NotFoundPage from "../pages/notFound";
 
 export const AppRouter = createBrowserRouter([
   {
@@ -14,13 +19,25 @@ export const AppRouter = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "/media",
+        path: "media",
         Component: Medias,
       },
       {
-        path: "/finances",
+        path: "finances",
         Component: AllFinances,
       },
+      {
+        path: "projects",
+        Component: ProjectsSection,
+      },
     ],
+  },
+  {
+    path: "/login",
+    Component: LoginPage,
+  },
+  {
+    path: "*",
+    Component: NotFoundPage,
   },
 ]);
