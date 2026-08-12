@@ -1,23 +1,25 @@
-using System.Net;
 using System.Text.Json;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Hosting;
 
 namespace server.Presentation;
 
 public class GlobalException
 {
-    private readonly RequestDelegate _request;
+    private readonly RequestDelegate _next;
+    private readonly IHostEnvironment _environment;
 
-    public GlobalException(RequestDelegate request)
+    public GlobalException(RequestDelegate next, IHostEnvironment environment)
     {
-        _request = request;
+        _next = next;
+        _environment = environment;
     }
 
     public async Task InvokeAsync(HttpContext http)
     {
         try
         {
-            await _request(http);
+            await _next(http);
         }
         catch (Exception ex)
         {
@@ -25,30 +27,29 @@ public class GlobalException
         }
     }
 
-    private static async Task HandleExceptionAsync(HttpContext http, Exception ex)
+    private async Task HandleExceptionAsync(HttpContext http, Exception ex)
     {
-        var status = ex switch
+        if (http.Response.HasStarted)
         {
-            KeyNotFoundException => HttpStatusCode.NotFound,
-            BadHttpRequestException => HttpStatusCode.BadRequest,
-            UnauthorizedAccessException => HttpStatusCode.Unauthorized,
-            InvalidOperationException => HttpStatusCode.Conflict,
+            return;
+        }
 
-            _ => HttpStatusCode.InternalServerError
+        var statusCode = ex switch
+        {
+            KeyNotFoundException => StatusCodes.Status404NotFound,
+            BadHttpRequestException => StatusCodes.Status400BadRequest,
+            UnauthorizedAccessException => StatusCodes.Status401Unauthorized,
+            InvalidOperationException => StatusCodes.Status409Conflict,
+            ArgumentNullException => StatusCodes.Status400BadRequest,
+            _ => StatusCodes.Status500InternalServerError
         };
 
-        var response = new
+        var message = ex.Message;
+        if (_environment.IsDevelopment() && statusCode == StatusCodes.Status500InternalServerError)
         {
-            success = false,
-            message = ex.Message,
-            error = ex.GetType().Name,
-            traceID = http.TraceIdentifier,
-            path = http.Request.Path
-        };
+            message = ex.ToString();
+        }
 
-        http.Response.ContentType = "application/json";
-        http.Response.StatusCode = (int)status;
-        var option = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase, WriteIndented = true };
-        await http.Response.WriteAsync(JsonSerializer.Serialize(response, option));
+        await ErrorResponseWriter.WriteAsync(http, statusCode, message, ex.GetType().Name);
     }
 }
