@@ -10,6 +10,8 @@ public static class ServiceDI
         services.AddScoped<MediaService>();
         services.AddScoped<ProjectService>();
         services.AddScoped<FinanceService>();
+        services.AddScoped<TokenService>();
+        services.AddScoped<AuthService>();
 
         return services;
     }
